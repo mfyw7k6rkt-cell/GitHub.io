@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jorg Megens</title>
+<meta name="description" content="Jorg Megens – operations and corporate development leader in digital commerce, supply chain and tech.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2317222E'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23E36A1E' font-family='Arial' font-weight='700'>JM</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #EDEFF1;
+    --ink: #17222E;
+    --muted: #55606C;
+    --line: #C9CED4;
+    --accent: #D2561A;
+    --surface: #FFFFFF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141C25;
+      --ink: #E8EBEE;
+      --muted: #9AA4AF;
+      --line: #2C3743;
+      --accent: #F07B35;
+      --surface: #1B2531;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
+  }
+  .page {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  }
+  .photo {
+    position: relative;
+    background: #1a1410;
+  }
+  .photo img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;
+    display: block;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2.5rem, 7vw, 6rem) clamp(1.5rem, 6vw, 5.5rem);
+    max-width: 44rem;
+  }
+  h1 {
+    font-size: clamp(3rem, 7.5vw, 6.25rem);
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+  }
+  h1 span { display: block; }
+  .role {
+    margin-top: 1.25rem;
+    padding-left: 0.9rem;
+    border-left: 3px solid var(--accent);
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: var(--ink);
+  }
+  section { margin-top: 3rem; }
+  h2 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+  }
+  .about p { max-width: 36em; }
+  .about p + p { margin-top: 0.9rem; }
+  .contact ul { list-style: none; padding: 0; border-top: 1px solid var(--line); }
+  .contact li { border-bottom: 1px solid var(--line); }
+  .contact a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.95rem 0;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.15rem;
+  }
+  .contact a small { color: var(--muted); font-size: 0.95rem; font-weight: 400; }
+  .contact a:hover span, .contact a:focus-visible span { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  footer { margin-top: 3rem; font-size: 0.85rem; color: var(--muted); }
+
+  @media (max-width: 760px) {
+    .page { grid-template-columns: 1fr; }
+    .photo { aspect-ratio: 1 / 1; max-height: 70vh; }
+    .content { padding-top: 2.25rem; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="photo">
+    <img src="jorg.jpg" alt="Portrait of Jorg Megens" width="800" height="800">
+  </div>
+
+  <div class="content">
+    <h1><span>Jorg</span><span>Megens</span></h1>
+
+    <section class="about" aria-labelledby="about-h">
+      <h2 id="about-h">About</h2>
+      <p>Operations and corporate development leader with over a decade of experience in digital commerce, supply chain and tech-driven business. Currently leading global fulfillment at Formlabs.</p>
+      <p>Skilled in strategy, operations and team building. Previously at Seven Senders, Shipwire and Ingram Micro. MSc (Ir.) in Industrial Engineering from Eindhoven University of Technology.</p>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/jorgmegens/" target="_blank" rel="noopener"><span>LinkedIn</span><small>/in/jorgmegens</small></a></li>
+      </ul>
+    </section>
+
+    <footer>© <span id="y">2026</span> Jorg Megens</footer>
+  </div>
+</main>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
